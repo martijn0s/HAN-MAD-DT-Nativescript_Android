@@ -8,8 +8,9 @@
 
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
   <StackLayout>
-    <Label text="Take a picture" class="title" />
+    <Label text="Een foto maken" class="title" />
     <Image id="myImage" />
-    <Button text="Take" tap="takePicture" />
+    <Button text="Maak foto" tap="takePicture" />
+    <Button text="Flitser" tap="" />
   </StackLayout>
 </Page>
