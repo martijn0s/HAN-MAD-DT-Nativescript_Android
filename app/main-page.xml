@@ -1,0 +1,15 @@
+<!--<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">-->
+  <!--<StackLayout>-->
+    <!--<Label text="Tap the button" class="title"/>-->
+    <!--<Button text="TAP" tap="{{ onTap }}" />-->
+    <!--<Label text="{{ message }}" class="message" textWrap="true"/>-->
+  <!--</StackLayout>-->
+<!--</Page>-->
+
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <StackLayout>
+    <Label text="Take a picture" class="title" />
+    <Image id="myImage" />
+    <Button text="Take" tap="takePicture" />
+  </StackLayout>
+</Page>
