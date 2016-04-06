@@ -1,2 +1,6 @@
 var application = require("application");
-application.start({ moduleName: "main-page" });
+application.start({ moduleName: "Application/application" });
+
+
+
+
