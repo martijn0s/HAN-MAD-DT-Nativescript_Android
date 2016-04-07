@@ -1,9 +1,9 @@
 <Page>
     <StackLayout>
-        <Button text="Accelerometer" />
-        <Button text="Camera" />
-        <Button text="Bluetooth" />
-        <Button text="Trilfunctie" />
+        <Button text="Accelerometer" tap="accelerometer" />
+        <Button text="Camera" tap="camera" />
+        <Button text="Bluetooth" tap="bluetooth" />
+        <Button text="Trilfunctie" tap="vibrate" />
         <Button text="TouchId" />
         <Button text="GPS" />
     </StackLayout>

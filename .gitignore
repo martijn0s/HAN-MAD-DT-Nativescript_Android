@@ -1,0 +1,4 @@
+platforms/
+tmp/
+.vscode
+npm-debug.log
