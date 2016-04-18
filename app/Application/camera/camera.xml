@@ -2,6 +2,6 @@
     <StackLayout>
         <Label class="title" text="Een foto maken" />
         <Image id="myImage" />
-        <Button tap="takePicture" text="Maak foto" />
+        <Button tap="takePicture" text="Maak foto" class="button" />
     </StackLayout>
 </Page>

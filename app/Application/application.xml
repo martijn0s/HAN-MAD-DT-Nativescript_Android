@@ -1,10 +1,45 @@
-<Page>
-    <StackLayout>
-        <Button text="Accelerometer" tap="accelerometer" />
-        <Button text="Camera" tap="camera" />
-        <Button text="Bluetooth" tap="bluetooth" />
-        <Button text="Trilfunctie" tap="vibrate" />
-        <Button text="TouchId" />
-        <Button text="GPS" />
-    </StackLayout>
+<!--<Page>-->
+    <!--<StackLayout>-->
+        <!--<Button text="Accelerometer" tap="accelerometer" class="button" />-->
+        <!--<Button text="Camera" tap="camera" class="button" />-->
+        <!--<Button text="Bluetooth" tap="bluetooth" class="button" />-->
+        <!--<Button text="Trilfunctie" tap="vibrate" class="button" />-->
+        <!--<Button text="TouchId" class="button" />-->
+        <!--<Button text="GPS" class="button" />-->
+    <!--</StackLayout>-->
+<!--</Page>-->
+
+<Page loaded="pageLoaded">
+    <TabView id="tabView1">
+        <TabView.items>
+            <TabViewItem title="Home">
+                <TabViewItem.view>
+                    <Label text="Home" />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Sensoren">
+                <TabViewItem.view>
+                    <Label text="Sensoren" />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Actuatoren">
+                <TabViewItem.view>
+                    <Button text="Camera" tap="camera" class="button" />
+                    <Button text="Trilfunctie" tap="vibrate" class="button" />
+                    <!--<Label text="Actuatoren" />-->
+                    <!--<Button text="Camera" class="button" />-->
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Userinterface">
+                <TabViewItem.view>
+                    <Label text="Userinterface" />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Architectuur">
+                <TabViewItem.view>
+                    <Label text="Architectuur" />
+                </TabViewItem.view>
+            </TabViewItem>
+        </TabView.items>
+    </TabView>
 </Page>
