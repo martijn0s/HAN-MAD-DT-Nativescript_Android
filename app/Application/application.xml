@@ -1,13 +1,4 @@
-<!--<Page>-->
-    <!--<StackLayout>-->
-        <!--<Button text="Accelerometer" tap="accelerometer" class="button" />-->
-        <!--<Button text="Camera" tap="camera" class="button" />-->
-        <!--<Button text="Bluetooth" tap="bluetooth" class="button" />-->
-        <!--<Button text="Trilfunctie" tap="vibrate" class="button" />-->
-        <!--<Button text="TouchId" class="button" />-->
-        <!--<Button text="GPS" class="button" />-->
-    <!--</StackLayout>-->
-<!--</Page>-->
+<!--<Page>--><!--<StackLayout>--><!--<Button text="Accelerometer" tap="accelerometer" class="button" />--><!--<Button text="Camera" tap="camera" class="button" />--><!--<Button text="Bluetooth" tap="bluetooth" class="button" />--><!--<Button text="Trilfunctie" tap="vibrate" class="button" />--><!--<Button text="TouchId" class="button" />--><!--<Button text="GPS" class="button" />--><!--</StackLayout>--><!--</Page>-->
 
 <Page loaded="pageLoaded">
     <TabView id="tabView1">
@@ -19,25 +10,39 @@
             </TabViewItem>
             <TabViewItem title="Sensoren">
                 <TabViewItem.view>
-                    <Label text="Sensoren" />
+                    <StackLayout>
+                        <Button class="button" tap="location" text="Location" />
+                        <Button class="button" tap="accelerometer" text="Accelerometer" />
+                        <Button class="button" tap="gyroscope" text="Gyroscope" />
+                        <Button class="button" tap="magnetometer" text="Magnetometer" />
+                        <Button class="button" tap="touchId" text="TouchID" />
+                    </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
             <TabViewItem title="Actuatoren">
                 <TabViewItem.view>
-                    <Button text="Camera" tap="camera" class="button" />
-                    <Button text="Trilfunctie" tap="vibrate" class="button" />
-                    <!--<Label text="Actuatoren" />-->
-                    <!--<Button text="Camera" class="button" />-->
+                    <StackLayout>
+                        <Button class="button" tap="vibrate" text="Trilfunctie" />
+                        <Button class="button" tap="bluetooth" text="Bluetooth" />
+                        <Button class="button" tap="camera" text="Camera" />
+                    </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
             <TabViewItem title="Userinterface">
                 <TabViewItem.view>
-                    <Label text="Userinterface" />
+                    <StackLayout>
+                        <Button class="button" tap="alert" text="Alert" />
+                        <Button class="button" tap="imagePicker" text="Image picker" />
+                        <Button class="button" tap="activityIndicator" text="Activity indicator" />
+                        <Button class="button" tap="maps" text="Maps" />
+                    </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
             <TabViewItem title="Architectuur">
                 <TabViewItem.view>
-                    <Label text="Architectuur" />
+                    <StackLayout>
+                        <Label text="Architectuur volgt nog" />
+                    </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
         </TabView.items>
