@@ -5,6 +5,10 @@ Button.button {
     font-size: 26px;
 }
 
-.page {
+Page {
+    background-color: #000000;
+}
+
+#tabView1 {
     background-color: #000000;
 }

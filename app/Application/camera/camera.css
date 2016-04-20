@@ -1,5 +1,10 @@
 Button.button {
-    background-color: #6699ff;
+    background-color: #48BAEC;
     width: 100%;
     color: #ffffff;
+    font-size: 26px;
+}
+
+Page {
+    background-color: #000000;
 }

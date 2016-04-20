@@ -1,6 +1,9 @@
 <!--<Page>--><!--<StackLayout>--><!--<Button text="Accelerometer" tap="accelerometer" class="button" />--><!--<Button text="Camera" tap="camera" class="button" />--><!--<Button text="Bluetooth" tap="bluetooth" class="button" />--><!--<Button text="Trilfunctie" tap="vibrate" class="button" />--><!--<Button text="TouchId" class="button" />--><!--<Button text="GPS" class="button" />--><!--</StackLayout>--><!--</Page>-->
 
 <Page loaded="pageLoaded">
+    <Page.actionBar>
+        <ActionBar title="Nativescript App"/>
+    </Page.actionBar>
     <TabView id="tabView1">
         <TabView.items>
             <TabViewItem title="Home">
@@ -8,10 +11,10 @@
                     <Label text="Home" />
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Sensoren">
+            <TabViewItem title="Sens">
                 <TabViewItem.view>
                     <StackLayout>
-                        <Button class="button" tap="location" text="Location" />
+                        <Button class="button" tap="geolocation" text="Location" />
                         <Button class="button" tap="accelerometer" text="Accelerometer" />
                         <Button class="button" tap="gyroscope" text="Gyroscope" />
                         <Button class="button" tap="magnetometer" text="Magnetometer" />
@@ -19,7 +22,7 @@
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Actuatoren">
+            <TabViewItem title="Act">
                 <TabViewItem.view>
                     <StackLayout>
                         <Button class="button" tap="vibrate" text="Trilfunctie" />
@@ -28,7 +31,7 @@
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Userinterface">
+            <TabViewItem title="UI">
                 <TabViewItem.view>
                     <StackLayout>
                         <Button class="button" tap="alert" text="Alert" />
@@ -38,7 +41,7 @@
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Architectuur">
+            <TabViewItem title="Arch">
                 <TabViewItem.view>
                     <StackLayout>
                         <Label text="Architectuur volgt nog" />

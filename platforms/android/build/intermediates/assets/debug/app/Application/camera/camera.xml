@@ -1,7 +1,0 @@
-<Page loaded="pageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
-    <StackLayout>
-        <Label class="title" text="Een foto maken" />
-        <Image id="myImage" />
-        <Button tap="takePicture" text="Maak foto" class="button" />
-    </StackLayout>
-</Page>
