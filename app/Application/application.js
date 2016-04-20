@@ -47,7 +47,7 @@ exports.touchId = function() {
 exports.vibrate = function()
 {
     // TODO Testen op fysiek device. In emulator exception (permission denied)
-    vibrateModule.vibration(2000);
+//    vibrateModule.vibration(2000);
 };
 
 /**

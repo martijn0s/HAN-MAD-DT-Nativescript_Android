@@ -15,7 +15,7 @@ exports.pageLoaded = pageLoaded;
 
 exports.takePicture = function()
 {
-        cameraModule.takePicture().then(function(picture) {
-            myImage.imageSource = picture;
-        });
+    cameraModule.takePicture().then(function(picture) {
+        myImage.imageSource = picture;
+    });
 }

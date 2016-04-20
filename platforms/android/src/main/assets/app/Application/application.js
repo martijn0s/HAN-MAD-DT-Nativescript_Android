@@ -6,10 +6,10 @@ var geolocationModule = require("nativescript-geolocation");
 var bluetoothModule = require("nativescript-bluetooth");
 var dialogModule = require("ui/dialogs");
 
-// Sensors
-// =======================================
 
-// Geolocation
+/**
+ * Geolocation
+ */
 exports.geolocation = function()
 {
     // TODO Checkt nu alleen of geolocation aanstaat, zo niet dan gaat ie naar de betreffende instelling toe
@@ -18,7 +18,9 @@ exports.geolocation = function()
     }
 };
 
-// Accelerometer
+/**
+ * Accelerometer
+ */
 var accelerometerIsStart = false;
 exports.accelerometer = function() {
     if(!accelerometerIsStart) {
@@ -26,46 +28,48 @@ exports.accelerometer = function() {
         accelerometerModule.startAccelerometerUpdates(function(data) {
             console.log("x: " + data.x + "y: " + data.y + "z: " + data.z);
         });
-     } else {
+    } else {
         accelerometerIsStart = false;
         accelerometerModule.stopAccelerometerUpdates();
     }
 };
 
-// TouchId
+/**
+ * TouchId
+ */
 exports.touchId = function() {
-    // TODO Gaat nu alleen naar een lege pagina toe.
     frameModule.topmost().navigate("Application/touchId/touchId");
 };
 
-
-// Actuators
-// =======================================
-
-// Vibrate
+/**
+ * Vibrate
+ */
 exports.vibrate = function()
 {
-    // TODO Test on physical device. In emulator exception (permission denied)
-    vibrateModule.vibration(2000);
+    // TODO Testen op fysiek device. In emulator exception (permission denied)
+//    vibrateModule.vibration(2000);
 };
 
-// Bluetooth
+/**
+ * Bluetooth
+ */
 exports.bluetooth = function()
 {
     var enabled = bluetoothModule.isEnabled;
     console.log("Enabled? " + enabled);
 };
 
-// Camera
+/**
+ * Camera
+ */
 exports.camera = function()
 {
     frameModule.topmost().navigate("Application/camera/camera");
 };
 
-
-// UserInterface
-// =======================================
-// Alert
+/**
+ * Alert
+ */
 exports.alert = function()
 {
     dialogModule.alert({
@@ -83,4 +87,3 @@ function pageLoaded(args) {
     tabView1.selectedIndex = 1;
 }
 exports.pageLoaded = pageLoaded;
-
