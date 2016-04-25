@@ -1,0 +1,9 @@
+Page {
+    background-color: #000000;
+}
+
+.listItemTitle {
+    color: #FFFFFF;
+    line-height: 40px;
+    margin: 5px 10px 0 10px;
+}

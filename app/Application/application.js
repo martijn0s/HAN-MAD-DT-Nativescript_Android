@@ -81,6 +81,38 @@ exports.alert = function()
     });
 }
 
+/**
+ * List view
+ */
+exports.listView = function()
+{
+    frameModule.topmost().navigate("Application/listView/listView");
+}
+
+/**
+ * Text view
+ */
+exports.textView = function()
+{
+
+}
+
+/**
+ * Html view
+ */
+exports.htmlView = function()
+{
+
+}
+
+/**
+ * Web view
+ */
+exports.webView = function()
+{
+
+}
+
 function pageLoaded(args) {
     var page = args.object;
     var tabView1 = view.getViewById(page, "tabView1");

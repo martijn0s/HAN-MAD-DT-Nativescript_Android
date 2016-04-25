@@ -1,0 +1,11 @@
+<Page loaded="pageLoaded">
+
+    <ListView id="listView1" items="{{ countries }}">
+        <ListView.itemTemplate>
+            <Border borderBottomWidth="1" borderColor="#C0C0C0">
+                <Label class="listItemTitle" id="label1" text="{{ name }}"  />
+            </Border>
+        </ListView.itemTemplate>
+    </ListView>
+
+</Page>

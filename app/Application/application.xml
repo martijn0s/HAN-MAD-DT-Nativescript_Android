@@ -36,6 +36,10 @@
                         <Button class="button" tap="imagePicker" text="Image picker" />
                         <Button class="button" tap="activityIndicator" text="Activity indicator" />
                         <Button class="button" tap="maps" text="Maps" />
+                        <Button class="button" tap="listView" text="List view" />
+                        <Button class="button" tap="textView" text="Text view" />
+                        <button class="button" tap="htmlView" text="Html view" />
+                        <Button class="button" tap="webView" text="Web view" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
