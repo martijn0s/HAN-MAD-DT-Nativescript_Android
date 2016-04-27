@@ -7,3 +7,8 @@ Page {
     line-height: 40px;
     margin: 5px 10px 0 10px;
 }
+
+.actionBar {
+     background-color: #000000;
+     color: #48BAEC;
+}
