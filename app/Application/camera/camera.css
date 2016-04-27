@@ -8,3 +8,8 @@ Button.button {
 Page {
     background-color: #000000;
 }
+
+.actionBar {
+     background-color: #000000;
+     color: #48BAEC;
+}

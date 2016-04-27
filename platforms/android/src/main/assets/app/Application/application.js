@@ -6,7 +6,6 @@ var geolocationModule = require("nativescript-geolocation");
 var bluetoothModule = require("nativescript-bluetooth");
 var dialogModule = require("ui/dialogs");
 
-
 /**
  * Geolocation
  */
@@ -47,7 +46,7 @@ exports.touchId = function() {
 exports.vibrate = function()
 {
     // TODO Testen op fysiek device. In emulator exception (permission denied)
-//    vibrateModule.vibration(2000);
+    vibrateModule.vibration(2000);
 };
 
 /**
@@ -55,8 +54,8 @@ exports.vibrate = function()
  */
 exports.bluetooth = function()
 {
-    var enabled = bluetoothModule.isEnabled;
-    console.log("Enabled? " + enabled);
+//    var enabled = bluetoothModule.isEnabled;
+//    console.log("Enabled? " + enabled);
 };
 
 /**
@@ -82,33 +81,25 @@ exports.alert = function()
 }
 
 /**
- * List view
+ * Activity Indicator
  */
-exports.listView = function()
+exports.activityIndicator = function()
+{
+    frameModule.topmost().navigate("Application/activityIndicator/activityIndicator");
+}
+
+/**
+ * Table view
+ */
+exports.tableView = function()
 {
     frameModule.topmost().navigate("Application/listView/listView");
 }
 
 /**
- * Text view
+ * Navigation view
  */
-exports.textView = function()
-{
-
-}
-
-/**
- * Html view
- */
-exports.htmlView = function()
-{
-
-}
-
-/**
- * Web view
- */
-exports.webView = function()
+exports.navigationView = function()
 {
 
 }

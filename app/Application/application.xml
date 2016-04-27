@@ -2,51 +2,54 @@
     <Page.actionBar>
         <ActionBar title="Nativescript App" class="actionBar"/>
     </Page.actionBar>
-    <TabView id="tabView1">
+    <TabView id="tabView1" cssClass="tabViewItem" tabsBackgroundColor="#000000" selectedColor="#48BAEC">
         <TabView.items>
-            <TabViewItem title="Home" class="tabViewItem">
-                <TabViewItem.view class="tabViewItem">
-                    <Label text="Home" class="tabViewItem" />
+            <TabViewItem title="Home">
+                <TabViewItem.view>
+                    <Label text="Home" />
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Sens">
+            <TabViewItem title="Sensoren">
                 <TabViewItem.view>
                     <StackLayout>
-                        <Button class="button" tap="geolocation" text="Location" />
-                        <Button class="button" tap="accelerometer" text="Accelerometer" />
-                        <Button class="button" tap="gyroscope" text="Gyroscope" />
-                        <Button class="button" tap="magnetometer" text="Magnetometer" />
-                        <Button class="button" tap="touchId" text="TouchID" />
+                        <Button tap="geolocation" text="Location" cssClass="enabled" />
+                        <Button tap="accelerometer" text="Accelerometer" cssClass="enabled" />
+                        <Button tap="gyroscope" text="Gyroscope" isEnabled="false" cssClass="disabled" />
+                        <Button tap="magnetometer" text="Magnetometer" isEnabled="false" cssClass="disabled" />
+                        <Button tap="touchId" text="TouchID" cssClass="enabled" />
+                        <Button tap="proximitySensor" text="Proximity Sensor" isEnabled="false" cssClass="construction" />
+                        <Button tap="ambientLight" text="Ambient Light" isEnabled="false" cssClass="construction" />
+                        <Button tap="moistureSensor" text="Moisture Sensor" isEnabled="false" cssClass="construction" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Act">
+            <TabViewItem title="Actuatoren">
                 <TabViewItem.view>
                     <StackLayout>
-                        <Button class="button" tap="vibrate" text="Trilfunctie" />
-                        <Button class="button" tap="bluetooth" text="Bluetooth" />
-                        <Button class="button" tap="camera" text="Camera" />
+                        <Button tap="vibrate" text="Vibrate" cssClass="enabled" />
+                        <Button tap="bluetooth" text="Bluetooth" cssClass="enabled" />
+                        <Button tap="camera" text="Camera" cssClass="enabled" />
+                        <Button tap="wifi" text="WiFi" isEnabled="false" cssClass="construction" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="UI">
+            <TabViewItem title="Userinterface">
                 <TabViewItem.view>
                     <StackLayout>
-                        <Button class="button" tap="alert" text="Alert" />
-                        <Button class="button" tap="imagePicker" text="Image picker" />
-                        <Button class="button" tap="activityIndicator" text="Activity indicator" />
-                        <Button class="button" tap="maps" text="Maps" />
-                        <Button class="button" tap="listView" text="List view" />
-                        <Button class="button" tap="textView" text="Text view" />
-                        <button class="button" tap="htmlView" text="Html view" />
-                        <Button class="button" tap="webView" text="Web view" />
+                        <Button tap="alert" text="Alert" cssClass="enabled" />
+                        <Button tap="imagePicker" text="Image picker" isEnabled="false" cssClass="construction" />
+                        <Button tap="activityIndicator" text="Activity indicator" cssClass="enabled" />
+                        <Button tap="maps" text="Maps" isEnabled="false" cssClass="construction" />
+                        <Button tap="navigatorView" text="Navigator View" isEnabled="false" cssClass="construction" />
+                        <Button tap="tableView" text="Table View" cssClass="enabled"/>
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Arch">
+            <TabViewItem title="Architectuur">
                 <TabViewItem.view>
                     <StackLayout>
-                        <Label text="Architectuur volgt nog" />
+                        <Button text="HealthKit" isEnabled="false" cssClass="disabled" />
+                        <Button text="CoreData" isEnabled="false" cssClass="disabled" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>

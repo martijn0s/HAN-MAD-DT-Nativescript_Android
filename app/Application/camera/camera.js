@@ -1,4 +1,3 @@
-// Camera module
 var cameraModule = require("camera");
 
 var myImage;

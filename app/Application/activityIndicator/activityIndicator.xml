@@ -1,0 +1,6 @@
+<Page>
+    <Page.actionBar>
+        <ActionBar title="Activity Indicator - Nativescript App" class="actionBar" />
+    </Page.actionBar>
+    <ActivityIndicator busy="{{ isLoading }}" />
+</Page>

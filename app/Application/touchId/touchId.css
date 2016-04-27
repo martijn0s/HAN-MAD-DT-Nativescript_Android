@@ -1,0 +1,13 @@
+Page {
+    background-color: #000000;
+}
+
+.title {
+     color: #48BAEC;
+     font-size: 16px;
+}
+
+.actionBar {
+     background-color: #000000;
+     color: #48BAEC;
+}

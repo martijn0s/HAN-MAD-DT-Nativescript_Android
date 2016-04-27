@@ -1,6 +1,9 @@
 <Page loaded="pageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+        <ActionBar title="Camera - Nativescript App" class="actionBar" />
+    </Page.actionBar>
     <StackLayout>
-        <Label class="title" text="Een foto maken" />
+        <Label class="title" text="Maak foto" />
         <Image id="myImage" />
         <Button tap="takePicture" text="Maak foto" class="button" />
     </StackLayout>
