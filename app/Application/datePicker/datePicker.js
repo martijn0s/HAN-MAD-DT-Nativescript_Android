@@ -11,7 +11,7 @@ function pageLoaded(args) {
     datePicker.day = 9;
 
     // Set min and max date
-    datePicker.minDate = new Date(1975, 0, 29);
+    datePicker.minDate = new Date(1970, 1, 1);
     datePicker.maxDate = new Date(2045, 4, 12);
 
     var data = new observableModule.Observable({datePicker});
