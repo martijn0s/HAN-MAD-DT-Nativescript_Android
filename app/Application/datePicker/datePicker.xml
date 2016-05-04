@@ -1,0 +1,8 @@
+<Page loaded="pageLoaded">
+    <Page.actionBar>
+        <ActionBar title="Userinterface - DatePicker" class="actionBar" />
+    </Page.actionBar>
+    <StackLayout>
+        <DatePicker day="{{ datePicker.day }}" month="{{ datePicker.month }}" year="{{ datePicker.year }}" verticalAlignment="center" horizontalAlignment="center" />
+    </StackLayout>
+</Page>

@@ -1,6 +1,6 @@
 <Page loaded="pageLoaded" xmlns="http://www.nativescript.org/tns.xsd">
     <Page.actionBar>
-        <ActionBar title="Camera - Nativescript App" class="actionBar" />
+        <ActionBar title="Actuator - Camera" class="actionBar" />
     </Page.actionBar>
     <StackLayout>
         <Label class="title" text="Maak foto" />

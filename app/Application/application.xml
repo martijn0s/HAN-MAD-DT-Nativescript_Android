@@ -37,11 +37,14 @@
                 <TabViewItem.view>
                     <StackLayout>
                         <Button tap="alert" text="Alert" cssClass="enabled" />
-                        <Button tap="imagePicker" text="Image picker" isEnabled="false" cssClass="construction" />
                         <Button tap="activityIndicator" text="Activity indicator" cssClass="enabled" />
                         <Button tap="maps" text="Maps" isEnabled="false" cssClass="construction" />
-                        <Button tap="navigatorView" text="Navigator View" isEnabled="false" cssClass="construction" />
+                        <Button tap="navigatorView" text="Navigator View" isEnabled="false" cssClass="disabled" />
                         <Button tap="tableView" text="Table View" cssClass="enabled"/>
+                        <Button tap="datePicker" text="Date Picker" cssClass="enabled"/>
+                        <Button tap="toolbar" text="Toolbar" cssClass="enabled"/>
+                        <Button tap="searchbar" text="Search Bar" cssClass="enabled"/>
+                        <Button tap="activityViewController" text="Activity View Controller" cssClass="enabled"/>
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>

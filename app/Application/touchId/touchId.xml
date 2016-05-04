@@ -1,6 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
     <Page.actionBar>
-        <ActionBar title="TouchID - Nativescript App" class="actionBar" />
+        <ActionBar title="Sensoren - TouchID" class="actionBar" />
     </Page.actionBar>
     <StackLayout >
         <Label text="{{authenticated ? 'Authenticated!' : 'Not authenticated'}}" class="title"  />

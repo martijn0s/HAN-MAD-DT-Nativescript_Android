@@ -1,16 +1,17 @@
 var frameModule = require("ui/frame");
 var view = require("ui/core/view");
-var vibrateModule = require("nativescript-vibrate");
+
 var accelerometerModule = require("nativescript-accelerometer");
 var geolocationModule = require("nativescript-geolocation");
 var bluetoothModule = require("nativescript-bluetooth");
 var dialogModule = require("ui/dialogs");
 
+var datePickerModule = require("ui/date-picker");
+
 /**
  * Geolocation
  */
-exports.geolocation = function()
-{
+exports.geolocation = function() {
     // TODO Checkt nu alleen of geolocation aanstaat, zo niet dan gaat ie naar de betreffende instelling toe
     if (!geolocationModule.isEnabled()) {
         geolocationModule.enableLocationRequest();
@@ -45,6 +46,7 @@ exports.touchId = function() {
  */
 exports.vibrate = function()
 {
+var vibrateModule = require("nativescript-vibrate");
     // TODO Testen op fysiek device. In emulator exception (permission denied)
     vibrateModule.vibration(2000);
 };
@@ -52,8 +54,8 @@ exports.vibrate = function()
 /**
  * Bluetooth
  */
-exports.bluetooth = function()
-{
+exports.bluetooth = function() {
+// TODO Implement method
 //    var enabled = bluetoothModule.isEnabled;
 //    console.log("Enabled? " + enabled);
 };
@@ -61,8 +63,7 @@ exports.bluetooth = function()
 /**
  * Camera
  */
-exports.camera = function()
-{
+exports.camera = function() {
     frameModule.topmost().navigate("Application/camera/camera");
 };
 
@@ -97,11 +98,33 @@ exports.tableView = function()
 }
 
 /**
- * Navigation view
+ * Toolbar
  */
-exports.navigationView = function()
+exports.toolbar = function()
 {
+   frameModule.topmost().navigate("Application/toolBar/toolBar");
+}
 
+/**
+ * Searchbar
+ */
+exports.searchbar = function()
+{
+   frameModule.topmost().navigate("Application/searchBar/searchBar");
+}
+
+/**
+ * Date Picker
+ */
+exports.datePicker = function() {
+    frameModule.topmost().navigate("Application/datePicker/datePicker");
+}
+
+/**
+ * Activity View Controller
+ */
+exports.activityViewController = function() {
+    // TODO Implement method
 }
 
 function pageLoaded(args)
