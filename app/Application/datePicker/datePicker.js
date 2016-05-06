@@ -5,7 +5,7 @@ function pageLoaded(args) {
     var page = args.object;
     var datePicker = new datePickerModule.DatePicker;
 
-    // Set day, mont and year
+    // Set day, month and year
     datePicker.year = 2015;
     datePicker.month = 5;
     datePicker.day = 9;
