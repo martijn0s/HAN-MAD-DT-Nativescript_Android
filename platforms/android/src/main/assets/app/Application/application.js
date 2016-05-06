@@ -5,7 +5,7 @@ var accelerometerModule = require("nativescript-accelerometer");
 var geolocationModule = require("nativescript-geolocation");
 var bluetoothModule = require("nativescript-bluetooth");
 var dialogModule = require("ui/dialogs");
-
+var vibrateModule = require("nativescript-vibrate");
 var datePickerModule = require("ui/date-picker");
 
 /**
@@ -15,6 +15,15 @@ exports.geolocation = function() {
     // TODO Checkt nu alleen of geolocation aanstaat, zo niet dan gaat ie naar de betreffende instelling toe
     if (!geolocationModule.isEnabled()) {
         geolocationModule.enableLocationRequest();
+    } else {
+        var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
+        then(function(loc) {
+            if (loc) {
+                dialogModule.alert(JSON.stringify(loc));
+            }
+        }, function(e){
+            dialogModule.alert("Error: " + e.message);
+        });
     }
 };
 
@@ -27,6 +36,7 @@ exports.accelerometer = function() {
         accelerometerIsStart = true;
         accelerometerModule.startAccelerometerUpdates(function(data) {
             console.log("x: " + data.x + "y: " + data.y + "z: " + data.z);
+//            dialogModule.alert("x: " + data.x + "y: " + data.y + "z: " + data.z);
         });
     } else {
         accelerometerIsStart = false;
@@ -46,8 +56,6 @@ exports.touchId = function() {
  */
 exports.vibrate = function()
 {
-var vibrateModule = require("nativescript-vibrate");
-    // TODO Testen op fysiek device. In emulator exception (permission denied)
     vibrateModule.vibration(2000);
 };
 
@@ -55,9 +63,25 @@ var vibrateModule = require("nativescript-vibrate");
  * Bluetooth
  */
 exports.bluetooth = function() {
-// TODO Implement method
-//    var enabled = bluetoothModule.isEnabled;
-//    console.log("Enabled? " + enabled);
+    bluetoothModule.isBluetoothEnabled().then(function(enabled) {
+        if(enabled) {
+            var message = '';
+            bluetoothModule.startScanning({
+                serviceUUIDs: [],
+                seconds: 4,
+                onDiscovered: function (peripheral) {
+                    message = "Bluetooth is enabled and device found with UUID: " + peripheral.UUID;
+                }
+            }).then(function() {
+                message += " scanning complete"
+            }, function (err) {
+                message += " error while scanning: " + err;
+            });
+            alert(message);
+        } else {
+            alert("Bluetooth is not enabled");
+        }
+    });
 };
 
 /**

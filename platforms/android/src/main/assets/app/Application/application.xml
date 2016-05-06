@@ -27,13 +27,13 @@
                 <TabViewItem.view>
                     <StackLayout>
                         <Button tap="vibrate" text="Vibrate" cssClass="enabled" />
-                        <Button tap="bluetooth" text="Bluetooth" cssClass="enabled" />
+                        <Button tap="bluetooth" text="Check bluetooth" cssClass="enabled" />
                         <Button tap="camera" text="Camera" cssClass="enabled" />
-                        <Button tap="wifi" text="WiFi" isEnabled="false" cssClass="construction" />
+                        <Button tap="connectionType" text="Connection type" cssClass="enabled" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
-            <TabViewItem title="Userinterface">
+            <TabViewItem title="UserInterface">
                 <TabViewItem.view>
                     <StackLayout>
                         <Button tap="alert" text="Alert" cssClass="enabled" />
@@ -45,6 +45,7 @@
                         <Button tap="toolbar" text="Toolbar" cssClass="enabled"/>
                         <Button tap="searchbar" text="Search Bar" cssClass="enabled"/>
                         <Button tap="activityViewController" text="Activity View Controller" cssClass="enabled"/>
+                        <Button tap="modalView" text="Modal View" cssClass="enabled" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
