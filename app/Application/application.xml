@@ -29,7 +29,7 @@
                         <Button tap="vibrate" text="Vibrate" cssClass="enabled" />
                         <Button tap="bluetooth" text="Check bluetooth" cssClass="enabled" />
                         <Button tap="camera" text="Camera" cssClass="enabled" />
-                        <Button tap="connectionType" text="Connection type" cssClass="enabled" />
+                        <Button tap="connectionCheck" text="Connection type" cssClass="enabled" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
@@ -44,8 +44,8 @@
                         <Button tap="datePicker" text="Date Picker" cssClass="enabled"/>
                         <Button tap="toolbar" text="Toolbar" cssClass="enabled"/>
                         <Button tap="searchbar" text="Search Bar" cssClass="enabled"/>
-                        <Button tap="activityViewController" text="Activity View Controller" cssClass="enabled"/>
-                        <Button tap="modalView" text="Modal View" cssClass="enabled" />
+                        <Button tap="activityViewController" text="Activity View Controller" isEnabled="false" cssClass="construction"/>
+                        <Button tap="modalView" text="Modal View" isEnabled="false" cssClass="construction" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>

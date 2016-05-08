@@ -17,9 +17,9 @@
                         <Button tap="gyroscope" text="Gyroscope" isEnabled="false" cssClass="disabled" />
                         <Button tap="magnetometer" text="Magnetometer" isEnabled="false" cssClass="disabled" />
                         <Button tap="touchId" text="TouchID" cssClass="enabled" />
-                        <Button tap="proximitySensor" text="Proximity Sensor" isEnabled="false" cssClass="construction" />
-                        <Button tap="ambientLight" text="Ambient Light" isEnabled="false" cssClass="construction" />
-                        <Button tap="moistureSensor" text="Moisture Sensor" isEnabled="false" cssClass="construction" />
+                        <Button tap="proximitySensor" text="Proximity Sensor" isEnabled="false" cssClass="disabled" />
+                        <Button tap="ambientLight" text="Ambient Light" isEnabled="false" cssClass="disabled" />
+                        <Button tap="moistureSensor" text="Moisture Sensor" isEnabled="false" cssClass="disabled" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>
@@ -29,7 +29,7 @@
                         <Button tap="vibrate" text="Vibrate" cssClass="enabled" />
                         <Button tap="bluetooth" text="Check bluetooth" cssClass="enabled" />
                         <Button tap="camera" text="Camera" cssClass="enabled" />
-                        <Button tap="connectionType" text="Connection type" cssClass="enabled" />
+                        <Button tap="connectionCheck" text="Connection type" cssClass="enabled" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>

@@ -7,12 +7,12 @@ var bluetoothModule = require("nativescript-bluetooth");
 var dialogModule = require("ui/dialogs");
 var vibrateModule = require("nativescript-vibrate");
 var datePickerModule = require("ui/date-picker");
+var connectivityModule = require("connectivity");
 
 /**
  * Geolocation
  */
 exports.geolocation = function() {
-    // TODO Checkt nu alleen of geolocation aanstaat, zo niet dan gaat ie naar de betreffende instelling toe
     if (!geolocationModule.isEnabled()) {
         geolocationModule.enableLocationRequest();
     } else {
@@ -21,8 +21,8 @@ exports.geolocation = function() {
             if (loc) {
                 dialogModule.alert(JSON.stringify(loc));
             }
-        }, function(e){
-            dialogModule.alert("Error: " + e.message);
+        }, function(exception){
+            dialogModule.alert("Error: " + exception.message);
         });
     }
 };
@@ -36,7 +36,6 @@ exports.accelerometer = function() {
         accelerometerIsStart = true;
         accelerometerModule.startAccelerometerUpdates(function(data) {
             console.log("x: " + data.x + "y: " + data.y + "z: " + data.z);
-//            dialogModule.alert("x: " + data.x + "y: " + data.y + "z: " + data.z);
         });
     } else {
         accelerometerIsStart = false;
@@ -74,8 +73,8 @@ exports.bluetooth = function() {
                 }
             }).then(function() {
                 message += " scanning complete"
-            }, function (err) {
-                message += " error while scanning: " + err;
+            }, function (exception) {
+                message += " error while scanning: " + exception;
             });
             alert(message);
         } else {
@@ -90,6 +89,25 @@ exports.bluetooth = function() {
 exports.camera = function() {
     frameModule.topmost().navigate("Application/camera/camera");
 };
+
+/**
+ * Connectivity
+ */
+exports.connectionCheck = function() {
+    var connectivityType = connectivityModule.getConnectionType();
+
+    switch(connectivityType) {
+        case connectivityModule.connectionType.none:
+            alert("Currently no connection");
+            break;
+        case connectivityModule.connectionType.wifi:
+            alert("Currently WiFi connection");
+            break;
+        case connectivityModule.connectionType.mobile:
+            alert("Currently mobile connection");
+            break;
+    }
+}
 
 /**
  * Alert
