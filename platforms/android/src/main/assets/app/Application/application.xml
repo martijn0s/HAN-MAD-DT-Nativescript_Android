@@ -38,14 +38,14 @@
                     <StackLayout>
                         <Button tap="alert" text="Alert" cssClass="enabled" />
                         <Button tap="activityIndicator" text="Activity indicator" cssClass="enabled" />
-                        <Button tap="maps" text="Maps" cssClass="construction" />
+                        <Button tap="maps" text="Maps" cssClass="enabled" />
                         <Button tap="navigatorView" text="Navigator View" isEnabled="false" cssClass="disabled" />
                         <Button tap="tableView" text="Table View" cssClass="enabled" />
                         <Button tap="datePicker" text="Date Picker" cssClass="enabled" />
                         <Button tap="toolbar" text="Toolbar" cssClass="enabled" />
                         <Button tap="searchbar" text="Search Bar" cssClass="enabled" />
-                        <Button tap="activityViewController" text="Activity View Controller" isEnabled="false" cssClass="construction" />
-                        <Button tap="modalView" text="Modal View" isEnabled="false" cssClass="construction" />
+                        <Button tap="activityViewController" text="Activity View Controller" cssClass="construction" />
+                        <Button tap="modalView" text="Modal View" cssClass="construction" />
                     </StackLayout>
                 </TabViewItem.view>
             </TabViewItem>

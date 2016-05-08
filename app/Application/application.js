@@ -1,6 +1,5 @@
 var frameModule = require("ui/frame");
 var view = require("ui/core/view");
-
 var accelerometerModule = require("nativescript-accelerometer");
 var geolocationModule = require("nativescript-geolocation");
 var bluetoothModule = require("nativescript-bluetooth");
@@ -166,10 +165,11 @@ exports.datePicker = function() {
 }
 
 /**
- * Activity View Controller
+ * Modal view
  */
-exports.activityViewController = function() {
-    // TODO Implement method
+exports.modalView = function() {
+    var currentPage = frameModule.topmost().currentPage;
+    currentPage.showModal("Application/searchBar/searchBar");
 }
 
 function pageLoaded(args)

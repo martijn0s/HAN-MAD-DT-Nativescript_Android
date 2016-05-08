@@ -170,6 +170,19 @@ exports.datePicker = function() {
  */
 exports.activityViewController = function() {
     // TODO Implement method
+
+    view = require("ui/core/view");
+    utils = require("utils/utils");
+    platform = require("platform");
+    var currentPage = frameModule.topmost().currentPage;
+
+    var controller = new UIActivityViewController(utils.android.collections.jsArrayToNSArray(["Test"]), null);
+    currentPage.collections.presentViewControllerAnimatedCompletion(controller, true, null);
+}
+
+exports.modalView = function() {
+    var currentPage = frameModule.topmost().currentPage;
+    currentPage.showModal("Application/searchBar/searchBar");
 }
 
 function pageLoaded(args)
