@@ -38,7 +38,7 @@
                     <StackLayout>
                         <Button tap="alert" text="Alert" cssClass="enabled" />
                         <Button tap="activityIndicator" text="Activity indicator" cssClass="enabled" />
-                        <Button tap="maps" text="Maps" cssClass="construction" />
+                        <Button tap="maps" text="Maps" cssClass="enabled" />
                         <Button tap="navigatorView" text="Navigator View" isEnabled="false" cssClass="disabled" />
                         <Button tap="tableView" text="Table View" cssClass="enabled" />
                         <Button tap="datePicker" text="Date Picker" cssClass="enabled" />
