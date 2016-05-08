@@ -126,32 +126,35 @@ exports.alert = function()
 /**
  * Activity Indicator
  */
-exports.activityIndicator = function()
-{
+exports.activityIndicator = function() {
     frameModule.topmost().navigate("Application/activityIndicator/activityIndicator");
+}
+
+/**
+ * Maps
+ */
+exports.maps = function() {
+    frameModule.topmost().navigate("Application/maps/maps");
 }
 
 /**
  * Table view
  */
-exports.tableView = function()
-{
+exports.tableView = function() {
     frameModule.topmost().navigate("Application/listView/listView");
 }
 
 /**
  * Toolbar
  */
-exports.toolbar = function()
-{
+exports.toolbar = function() {
    frameModule.topmost().navigate("Application/toolBar/toolBar");
 }
 
 /**
  * Searchbar
  */
-exports.searchbar = function()
-{
+exports.searchbar = function() {
    frameModule.topmost().navigate("Application/searchBar/searchBar");
 }
 
